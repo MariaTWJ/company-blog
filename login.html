@@ -20,12 +20,10 @@
             <img src="pic2.png" class="img-fluid" onclick="imageClick()"> <!--logo-->
           </div>
           <div class="col-4" style="margin-left:-40px;">
-            <h1>Stellan </h1>
+            <h1 onclick="imageClick()">Stellan </h1>
           </div>
           <div class="col-6" id="login">
-            <a href="login.html" id="auth">
-                              Login
-            </a>
+           
           </div>
           <div class="col-5 offset-2">
 
@@ -54,6 +52,7 @@
                                     <label class="form-control-label">PASSWORD</label>
                                     <input type="password" class="form-control" id="pass">
                                 </div>
+                                <p id="worngpass" style="color: red; text-align: center;"></p>
     
                                 <div class="col-lg-12 loginbttm">
                                    
@@ -70,16 +69,23 @@
             </div>
 
                 <!--footer-->
-           <div class="row" style="background-color: #19323C;">
-                    <div class="col-3 offset-1" id="footer">
-                      <h5>Who are we?</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Phasellus vel fermentum sem. Curabitur aliquam quam sit amet leo pharetra tincidunt.
-                         Nullam semper odio lectus, ac fermentum nibh porttitor eget. Maecenas eros elit,
-                          hendrerit sit amet mauris non, tincidunt dictum est. Integer aliquet gravida nulla. Donec.</p>
-                    </div>
-                  
+           <div<!--footer-->
+            <div class="row" style="background-color: #19323C;">
+                <div class="col-5 offset-1" id="footer">
+                  <h5>Who are we?</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Phasellus vel fermentum sem. Curabitur aliquam quam sit amet leo pharetra tincidunt.
+                     Nullam semper odio lectus Maecenas eros elit,
+                      hendrerit sit amet mauris non, tincidunt dictum est. Integer aliquet gravida nulla. Donec.</p>
                 </div>
+                <div class="col-3 offset-2" id="footer2">
+                  <h5>Services:</h4>
+                    <p>-Lorem ipsum</p>
+                    <p>-sit amet</p>
+                    <p>-amet mauris</p>
+                </div>
+              
+            </div>
               </div> 
 
             <!--floating button-->
@@ -110,7 +116,8 @@
 
                } 
                else {
-                 document.getElementById("auth").innerHTML = "ops";
+                 document.getElementById("worngpass").innerHTML = "user name or password is worng ";
+
                }
             
             }
