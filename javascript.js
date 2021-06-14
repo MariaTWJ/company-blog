@@ -13,19 +13,28 @@ for (var i = 1; i < localStorage.length; i++){
     var element0 = document.getElementById("div1");
     element0.appendChild(terms);
 
-    var para2 = document.createElement("h3");
+    var para2 = document.createElement("h2");
     var node2 = document.createTextNode(postval[0]);
     para2.appendChild(node2);
     var element2 = document.getElementById(divId);
     element2.appendChild(para2);
+
+
+    var para3 = document.createElement("p");
+    var node3 = document.createTextNode(postval[2]);
+    para3.appendChild(node3);
+    var element3 = document.getElementById(divId);
+    element3.appendChild(para3);
     
 
-    var para = document.createElement("h3");
+    var para = document.createElement("h4");
     var node = document.createTextNode(postval[1]);
     para.appendChild(node);
     var element = document.getElementById(divId);
     element.appendChild(para);
  
+
+   
     
 
 
@@ -72,7 +81,9 @@ for (var i = 1; i < localStorage.length; i++){
   function posting() {
     let title = document.getElementById('title').value
     let det = document.getElementById('det').value
-    let post =[title,det]
+    let date = document.getElementById('date').value
+
+    let post =[title,det,date]
     localStorage.setItem(title, JSON.stringify(post));
     
 
