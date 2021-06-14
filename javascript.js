@@ -38,15 +38,7 @@ for (var i = 1; i < localStorage.length; i++){
     
 
 
- }   
-              
-              
-
-
-              
-       
-
-
+ }  
         
 
             /*to change status in locstor to not notlogged*/
@@ -85,6 +77,7 @@ for (var i = 1; i < localStorage.length; i++){
 
     let post =[title,det,date]
     localStorage.setItem(title, JSON.stringify(post));
+    alert("post has been posted!");
     
 
 
