@@ -1,12 +1,25 @@
 
               
               
-              
+              /*to change login*/
               if (localStorage.getItem("status")=="logged") {
                 document.getElementById("auth").innerHTML = "Logout";
+                document.getElementById("addPost").style.visibility="visible";
                   
               }
+
+              else{
+                document.getElementById("auth").innerHTML = "Login";
+
+              }
+
+            /*to change status in locstor to not notlogged*/
+              document.getElementById("auth").addEventListener("click", displayDate);
+              function displayDate() {
               
+                localStorage.setItem("status","notlogged")
+        }
+            /*to auth the admin*/
               var form = document.getElementById("myForm");
               function handleForm(event) { event.preventDefault(); } 
               form.addEventListener('submit', handleForm);
@@ -29,3 +42,9 @@
                }
             
             }
+            /*logo*/
+
+            function imageClick(u) {
+                location.replace("index.html")
+            }
+            
